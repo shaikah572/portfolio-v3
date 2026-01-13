@@ -1,6 +1,7 @@
 import React from 'react'
 import ThemToggle from '../Components/ThemToggle'
 import NavBar from '../Components/NavBar'
+import Header from '../Components/Section/Header'
 
 const Home = () => {
   return (
@@ -8,6 +9,9 @@ const Home = () => {
         
         <ThemToggle />
         <NavBar />
+        <main>
+            <Header />
+        </main>
        
     </div>
   )

@@ -46,15 +46,15 @@ const NavBar = () => {
                 viewNav ? 'top-[20px] opacity-100' : 'top-[-100px] opacity-0'
             )}
         >
-            <div className="pointer-events-auto flex items-center gap-2 px-3 py-2 border rounded-lg backdrop-blur-sm w-fit max-w-[90vw]">
+            <div className='pointer-events-auto flex items-center gap-2 px-3 py-2 border rounded-lg backdrop-blur-sm w-fit max-w-[90vw]'>
 
                 {/* Desktop nav */}
-                <div className="hidden md:flex gap-4 text-sm">
+                <div className='hidden md:flex gap-4 text-sm'>
                     {navSections.map((section) => (
                         <a
                             key={section.name}
                             href={section.href}
-                            className="text-foreground/80 hover:text-primary transition-colors"
+                            className='text-foreground/80 hover:text-primary transition-colors'
                         >
                             {section.name}
                         </a>
@@ -64,8 +64,8 @@ const NavBar = () => {
                 {/* Mobile toggle */}
                 <button
                     onClick={() => setMobileOpen((prev) => !prev)}
-                    className="md:hidden p-2"
-                    aria-label="Toggle menu"
+                    className='md:hidden p-2'
+                    aria-label='Toggle menu'
                 >
                     {mobileOpen ? <X size={20} /> : <Menu size={20} />}
                 </button>
@@ -83,7 +83,7 @@ const NavBar = () => {
                         key={section.name}
                         href={section.href}
                         onClick={() => setMobileOpen(false)}
-                        className="hover:text-primary transition"
+                        className='hover:text-primary transition'
                     >
                         {section.name}
                     </a>

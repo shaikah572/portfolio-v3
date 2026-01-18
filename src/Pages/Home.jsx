@@ -10,6 +10,7 @@ const About = lazyWithDelay(() => import('../Components/Section/About'), 2500)
 const Skills = lazyWithDelay(() => import('../Components/Section/Skills'), 2500)
 const Projects = lazyWithDelay(() => import('../Components/Section/Projects'), 2500)
 const Contact = lazyWithDelay(() => import('../Components/Section/Contact'), 2500)
+const Footer = lazyWithDelay(() => import('../Components/Footer'), 2500)
 
 const Preloader = lazy(() => import('../Components/Preloader'))
 
@@ -28,7 +29,7 @@ const HomePage = () => {
         <Projects />
         <Contact />
       </main>
-      
+      <Footer />
     </div>
   )
 

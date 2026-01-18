@@ -35,9 +35,9 @@ const ThemToggle = () => {
                 "focus:outlin-hidden"
             )}>
             {isDark ?
-                (<Sun className='h-6 w6 text-white' />)
+                (<Sun className='h-6 w6 text-primary' />)
                 :
-                (<Moon className='h-6 w-6 text-black' />)}
+                (<Moon className='h-6 w-6 text-primary' />)}
         </button>
     )
 }

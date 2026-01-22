@@ -27,8 +27,8 @@ Personal portfolio website built with React.
 To run the project locally:
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/shaikah572/portfolio-v3.git
+cd portfolio-v3
 npm install
 npm run dev
 ```

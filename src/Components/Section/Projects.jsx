@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, ExternalLink, Github } from 'lucide-react'
+import { ArrowRight, Github } from 'lucide-react'
 
 const projects = [
     {
@@ -12,11 +12,11 @@ const projects = [
     },
     {
         id: 2,
-        title: 'Project2',
-        description: 'Description',
-        technologies: ['tech'],
-        image: 'https://i.postimg.cc/7hTrDX9W/images.jpg',
-        github: 'https://github.com',
+        title: 'IdealCar',
+        description: 'Mobile application designed to help users estimate the fair price of used cars.',
+        technologies: ['Flutter', 'Dart', 'Python', 'Firebase'],
+        image: 'https://i.postimg.cc/Sx6sMYtJ/0-splash-page-edit.png',
+        github: 'https://github.com/shaikah572/IdealCar',
     },
 
 ]

@@ -31,8 +31,8 @@ const ThemToggle = () => {
     return (
         <button onClick={changeTheme}
             className={cn(
-                "fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
-                "focus:outlin-hidden"
+                "p-2 rounded-full transition-colors duration-300",
+                "focus:outline-hidden"
             )}>
             {isDark ?
                 (<Sun className='h-6 w6 text-primary' />)

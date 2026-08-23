@@ -20,7 +20,7 @@ const HomePage = () => {
   return (
     <div className='min-h-screen bg-background text-foreground overflow-x-hidden '>
 
-      <ThemToggle />
+      {/* <ThemToggle /> */}
       <NavBar />
       <main>
         <Header />

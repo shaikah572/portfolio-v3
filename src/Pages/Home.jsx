@@ -1,48 +1,46 @@
-import React, { Suspense, lazy } from 'react'
-import { lazyWithDelay } from '../lib/lazyWithDelay'
+import React, { useEffect, useState } from 'react'
+
+import NavBar from '../Components/NavBar'
+import Header from '../Components/Section/Header'
+import About from '../Components/Section/About' 
+import Skills from '../Components/Section/Skills' 
+import Projects from '../Components/Section/Projects' 
+import Contact from '../Components/Section/Contact' 
+import Footer from '../Components/Footer' 
+import Preloader from '../Components/Preloader'
+
+import SectionReveal from '../Components/SectionReveal'
 
 
-const ThemToggle = lazyWithDelay(() => import('../Components/ThemToggle'), 2500)
-const NavBar = lazyWithDelay(() => import('../Components/NavBar'), 2500)
+const Home = () => {
+  const [isLoading, setIsLoading] = useState(true)
 
-const Header = lazyWithDelay(() => import('../Components/Section/Header'), 2500)
-const About = lazyWithDelay(() => import('../Components/Section/About'), 2500)
-const Skills = lazyWithDelay(() => import('../Components/Section/Skills'), 2500)
-const Projects = lazyWithDelay(() => import('../Components/Section/Projects'), 2500)
-const Contact = lazyWithDelay(() => import('../Components/Section/Contact'), 2500)
-const Footer = lazyWithDelay(() => import('../Components/Footer'), 2500)
+  useEffect(() => {
+    const timer = setTimeout (() => {
+      setIsLoading(false)
+    }, 2000)
+    return () => clearTimeout(timer)
+  }, [])
 
-const Preloader = lazy(() => import('../Components/Preloader'))
-
-
-const HomePage = () => {
+  if (isLoading){
+    return <Preloader />
+  }
 
   return (
-    <div className='min-h-screen bg-background text-foreground overflow-x-hidden '>
-
-      {/* <ThemToggle /> */}
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <NavBar />
       <main>
         <Header />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+
+        <SectionReveal> <About/> </SectionReveal>
+        <SectionReveal> <Skills/> </SectionReveal>
+        <SectionReveal> <Projects/> </SectionReveal>
+        <SectionReveal> <Contact/> </SectionReveal>
+
       </main>
       <Footer />
+
     </div>
-  )
-
-}
-
-const Home = () => {
-
-  return (
-    <>
-      <Suspense fallback={<Preloader />}>
-        <HomePage />
-      </Suspense>
-    </>
   )
 
 }
